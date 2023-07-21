@@ -1,0 +1,12 @@
+REQUIRED PACKAGES:
+pip install bertopic
+pip install jieba
+pip install umap-learn
+pip install scikit-learn
+pip install sentence-transformers
+pip install nltk
+pip install html2image
+
+REQUIRED FILES:
+haodfcomments.csv
+fixes-zh.txt

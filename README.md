@@ -1,6 +1,7 @@
 # BERTopic for Chinese Language
 Hannah Sun   
-hysun@umich.edu  
+hysun@umich.edu
+hannahxsun0504@gmail.com
 
 ## Project Mentor
 Dr. Patrick Pang, Assistant Professor and PhD supervisor in the Faculty of Applied Sciences at Macao Polytechnic University.

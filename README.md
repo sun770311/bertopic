@@ -14,9 +14,11 @@ Dr. Patrick Pang, Assistant Professor and PhD supervisor in the Faculty of Appli
 ## Challenges
 BERTopic is originally designed for English, which naturally has spaces between words that the topic modeling technique uses to distinguish keywords for each topic. On the other hand, Chinese characters do not have spaces in between them and more than one character can be joined to create a phrae that translates to a singular English word. Therefore, we need to split Chinese words and phrases appropriately in the pre-processing steps.
 <br />
+<br />
 
 ## Required Packages and Files
 Listed in requirements.txt
+<br />
 <br />
    
 ## two_functions.py 
@@ -31,6 +33,7 @@ The second function bert() has 2 parameters-
 1. input_file: name of output file from split_input(), in this case split_comments.csv
 2. path_name: the directory path to output files generated with BERTopic.
 We flatten the input list of lists into a single list before initializing the topic model with some specifications. Next, we fit the model on this list of documents and generate topics. Finally, we output 5 visualizations- topic map, topic distribution, topic hierarchy, topic word scores, and topic similarity heatmap- to the user's directory path of choice.
+<br />
 <br />
 
 ## References

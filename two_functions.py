@@ -61,6 +61,7 @@ def split_input(filename, stopwords, splitfile):
 # 1) File with split sentences, 
 # 2) Name of path to output visualization files
 def bert(input_file, path_name):
+    # used to embed sentences into a vector space
     model = SentenceTransformer('DMetaSoul/sbert-chinese-general-v2-distill')
 
     # Flatten csv file into one list
@@ -69,6 +70,7 @@ def bert(input_file, path_name):
     input_list = input_list.values.tolist()
     list_flat = flatten(input_list)
 
+    # converts a string value into a collection of bytes
     embeddings = model.encode(list_flat)
 
     # Ensure that each run produces the same results 
@@ -76,13 +78,14 @@ def bert(input_file, path_name):
 
     # Initializes topic model
     topic_model = BERTopic(language="chinese (simplified)",
-                        umap_model= umap_model,
-                        nr_topics = "auto",
-                        top_n_words = 5,
-                        calculate_probabilities = True, 
+                        umap_model= umap_model, # ensure same outcome each time
+                        nr_topics = "auto", # automatically group together similar topics
+                        top_n_words = 5, # display only the top 5 most frequent terms from each topic
+                        calculate_probabilities = True, # calculates the probabilities of all topics across all documents instead of only the assigned topic
                         embedding_model = model, 
                         verbose = True)
 
+    # fit the model on this list of documents and generate topics
     topics, probs = topic_model.fit_transform(list_flat, embeddings = embeddings)
 
     # Set path to input path when saving jpg

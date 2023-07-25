@@ -101,7 +101,7 @@ def bert(input_file, path_name):
     )
 
     # 2. Distribution of topics
-    topic_model.visualize_distribution(probs[100], min_probability=0.002).write_html('distribution.html')
+    topic_model.visualize_distribution(probs[120], min_probability=0.002).write_html('distribution.html')
 
     hti.screenshot(
         html_file='distribution.html', 
@@ -138,5 +138,5 @@ def bert(input_file, path_name):
 
 
 # Run functions
-split_input('haodfcomments.csv', 'fixes-zh.txt', 'split_comments.csv')
-bert('split_comments.csv', '/Users/hannahsun/Desktop/haodf')
+split_input('haodfcomments2.csv', 'fixes-zh.txt', 'split_comments2.csv')
+bert('split_comments2.csv', '/Users/hannahsun/Desktop/haodf')

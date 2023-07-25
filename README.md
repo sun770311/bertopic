@@ -24,9 +24,9 @@ Listed in requirements.txt
    
 ## two_functions.py 
 The first function split_input() takes in 3 files- 
-1. haodfcomments.csv with the original input text, 
+1. haodfcomments.csv or haodfcomments2.csv with the original input text, 
 2. fixes-zh.txt with the list of stopwords to remove,
-3. split_comments.csv as the output csv with split words/phrases (can rename to file of your choice)
+3. split_comments.csv or split_comments2.csv as the output csv with split words/phrases (can rename to file of your choice)
 and pre-processes the input. We strip the stopwords and identify Chinese words and phrases through word segmentation. [Jieba](https://pypi.org/project/jieba/), a Python Chinese word segmentation module, is used to facilitate this step. The processed comments are written to split_comments.csv to be taken in by the second function.
 <br />
 
@@ -36,6 +36,16 @@ The second function bert() has 2 parameters-
 We flatten the input list of lists into a single list before initializing the topic model with some specifications. Next, we fit the model on this list of documents and generate topics. Finally, we output 5 visualizations- topic map, topic distribution, topic hierarchy, topic word scores, and topic similarity heatmap- to the user's directory path of choice.
 <br />
 <br />
+
+## Visualizations
+1. topics.jpg
+2. distribution.jpg
+3. hierarchy.jpg
+4. barchart.jpg
+5. heatmap.jpg
+<br />
+<br />
+
 
 ## References
 [BERTopic Github Repository](https://github.com/MaartenGr/BERTopic) by Maarten Grootendorst
